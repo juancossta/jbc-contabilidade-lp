@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --font-main: 'Inter', sans-serif;
+    --font-title: 'Lexend', sans-serif;
+    --brand-blue: #1e3a8a;
+}
+
+body { 
+    font-family: var(--font-main);
+    -webkit-font-smoothing: antialiased;
+}
+.font-lexend { font-family: var(--font-title); }
+
+/* MENU ANIMADO */
+.nav-link { 
+    @apply transition-all duration-300 relative py-1 text-slate-600; 
+}
+.nav-link::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-blue-700 transition-all duration-300;
+}
+.nav-link:hover::after, .active-nav::after {
+    @apply w-full;
+}
+.active-nav { @apply text-blue-900 font-bold; }
+
+/* CARDS E COMPONENTES */
+.service-card {
+    @apply p-10 bg-white border border-slate-100 rounded-[2.5rem] transition-all duration-500;
+    will-change: transform, box-shadow;
+}
+.service-card:hover {
+    @apply border-blue-200 -translate-y-3;
+    box-shadow: 0 20px 40px -15px rgba(30, 58, 138, 0.1);
+}
+
+.icon-box {
+    @apply w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-3xl mb-8;
+}
+
+.input-field {
+    @apply w-full p-5 rounded-2xl border border-slate-200 bg-slate-50 focus:bg-white 
+           focus:ring-2 focus:ring-blue-500 outline-none transition-all text-sm;
+}
+
+/* ANIMAÇÕES DE REVEAL */
+.reveal-hidden {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* WHATSAPP PULSE */
+.btn-whatsapp-pulse {
+    @apply bg-green-600 text-white px-12 py-5 rounded-2xl font-bold shadow-xl 
+           transition-all hover:scale-105 inline-block text-center;
+    animation: pulse-green 2s infinite;
+}
+@keyframes pulse-green {
+    0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.6); }
+    70% { box-shadow: 0 0 0 15px rgba(34, 197, 94, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+}
+
+/* ZOOM NAS IMAGENS */
+.group img {
+    @apply transition-transform duration-500;
+}
+.group:hover img {
+    @apply scale-110;
+}
+
+.animate-fade-in { animation: fadeIn 1.2s ease-out; }
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

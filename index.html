@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JBC Contabilidade | Excelência em Queimados</title>
+    
+    <meta name="description" content="JBC Contabilidade em Queimados. Especialistas em abertura de empresas, igrejas e imposto de renda.">
+    <meta name="theme-color" content="#1e3a8a">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Lexend:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans overflow-x-hidden">
+
+    <div id="modal-sucesso" class="fixed inset-0 z-[100] hidden items-center justify-center p-6 bg-blue-950/40 backdrop-blur-sm">
+        <div class="bg-white rounded-[2.5rem] p-10 max-w-sm w-full text-center shadow-2xl animate-fade-in">
+            <div class="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-4xl mx-auto mb-6">✓</div>
+            <h3 class="text-2xl font-bold font-lexend text-blue-900 mb-2">Enviado com Sucesso!</h3>
+            <p class="text-slate-500 text-sm mb-8 leading-relaxed">Recebemos sua solicitação. O escritório <strong>JBC Contabilidade</strong> entrará em contato em breve.</p>
+            <button onclick="fecharModal()" class="w-full bg-blue-900 text-white py-4 rounded-2xl font-bold hover:bg-blue-800 transition-all">ENTENDI</button>
+        </div>
+    </div>
+
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-sm py-4 px-6 border-b border-slate-100">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex flex-col">
+                <span class="text-2xl font-bold text-blue-900 font-lexend leading-none">JBC</span>
+                <span class="text-[10px] tracking-widest uppercase text-blue-700 font-bold">Contabilidade</span>
+            </div>
+            <div class="hidden md:flex gap-8 text-[11px] font-bold uppercase tracking-widest text-slate-600">
+                <a href="#inicio" class="nav-link">Início</a>
+                <a href="#servicos" class="nav-link">Serviços</a>
+                <a href="#depoimentos" class="nav-link">Clientes</a>
+                <a href="#orcamento" class="nav-link">Orçamento</a>
+                <a href="#contato" class="nav-link text-blue-700 font-black">Contato</a>
+            </div>
+        </div>
+    </nav>
+
+    <header id="inicio" class="min-h-screen pt-32 pb-20 px-6 bg-gradient-to-br from-blue-900 to-indigo-950 text-white flex items-center">
+        <div class="max-w-7xl mx-auto animate-fade-in">
+            <h1 class="text-5xl md:text-6xl font-bold font-lexend leading-tight mb-6">Expertise contábil para o seu <span class="text-blue-400">crescimento.</span></h1>
+            <p class="text-blue-100 text-lg mb-8 max-w-xl">Consultoria especializada para empresas e instituições religiosas em Queimados. Soluções precisas desde 2019.</p>
+            <div class="flex flex-wrap gap-4">
+                <a href="#orcamento" class="bg-blue-500 hover:bg-blue-600 px-8 py-4 rounded-xl font-bold transition-all shadow-xl active:scale-95">Solicitar Orçamento</a>
+                <button onclick="enviarWhatsapp('geral')" class="bg-white/10 hover:bg-white/20 border border-white/30 px-8 py-4 rounded-xl font-bold transition-all">WhatsApp</button>
+            </div>
+        </div>
+    </header>
+
+    <section id="servicos" class="py-24 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-center text-3xl font-bold font-lexend text-blue-900 uppercase mb-16">Especialidades</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="service-card">
+                    <div class="icon-box">🏢</div>
+                    <h4 class="font-bold text-xl mb-3 text-blue-950">Empresas</h4>
+                    <p class="text-slate-500 text-sm mb-6">Abertura de CNPJ, gestão de folha e consultoria fiscal estratégica.</p>
+                    <button onclick="enviarWhatsapp('empresa')" class="text-blue-700 font-bold hover:underline">Consultar →</button>
+                </div>
+                <div class="service-card">
+                    <div class="icon-box">⛪</div>
+                    <h4 class="font-bold text-xl mb-3 text-blue-950">Igrejas</h4>
+                    <p class="text-slate-500 text-sm mb-6">Especialistas em imunidade tributária e regularização de atas e estatutos.</p>
+                    <button onclick="enviarWhatsapp('igreja')" class="text-blue-700 font-bold hover:underline">Consultar →</button>
+                </div>
+                <div class="service-card">
+                    <div class="icon-box">📊</div>
+                    <h4 class="font-bold text-xl mb-3 text-blue-950">Imposto de Renda</h4>
+                    <p class="text-slate-500 text-sm mb-6">Declaração segura para PF e PJ, garantindo total conformidade fiscal.</p>
+                    <button onclick="enviarWhatsapp('irpf')" class="text-blue-700 font-bold hover:underline">Consultar →</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="depoimentos" class="py-24 px-6 bg-slate-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold font-lexend text-blue-900 uppercase">O que dizem nossos clientes</h2>
+                <div class="w-16 h-1 bg-blue-600 mx-auto mt-4 rounded-full"></div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-8 bg-white rounded-[2rem] border border-slate-100 shadow-sm transition-all hover:shadow-md">
+                    <div class="flex text-yellow-400 mb-4 text-xs">★★★★★</div>
+                    <p class="text-slate-600 text-sm italic leading-relaxed mb-6">"Profissionalismo impecável. Abriram minha empresa em tempo recorde e cuidam de tudo com clareza."</p>
+                    <div class="font-bold text-blue-900 text-[10px] uppercase tracking-widest">Varejo | Queimados</div>
+                </div>
+                <div class="p-8 bg-white rounded-[2rem] border border-slate-100 shadow-sm transition-all hover:shadow-md">
+                    <div class="flex text-yellow-400 mb-4 text-xs">★★★★★</div>
+                    <p class="text-slate-600 text-sm italic leading-relaxed mb-6">"Regularizamos toda a documentação da nossa instituição com a JBC. São especialistas em Igrejas."</p>
+                    <div class="font-bold text-blue-900 text-[10px] uppercase tracking-widest">Instituição Religiosa</div>
+                </div>
+                <div class="p-8 bg-white rounded-[2rem] border border-slate-100 shadow-sm transition-all hover:shadow-md">
+                    <div class="flex text-yellow-400 mb-4 text-xs">★★★★★</div>
+                    <p class="text-slate-600 text-sm italic leading-relaxed mb-6">"Atendimento humanizado e técnico. Passo meu IR com o Jose Braz todo ano sem preocupações."</p>
+                    <div class="font-bold text-blue-900 text-[10px] uppercase tracking-widest">Profissional Autônomo</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog" class="py-24 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-center text-3xl font-bold font-lexend text-blue-900 uppercase mb-16">Dicas Contábeis</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="group cursor-pointer">
+                    <div class="h-48 bg-slate-200 rounded-3xl mb-6 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1454165833767-027ff8d9b4db?auto=format&fit=crop&q=80&w=500" class="w-full h-full object-cover">
+                    </div>
+                    <h5 class="font-bold text-blue-900 group-hover:text-blue-600">Como o MEI se aposenta em 2026?</h5>
+                    <p class="text-xs text-slate-500 mt-2">Saiba tudo sobre a contribuição previdenciária.</p>
+                </div>
+                <div class="group cursor-pointer">
+                    <div class="h-48 bg-slate-200 rounded-3xl mb-6 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=500" class="w-full h-full object-cover">
+                    </div>
+                    <h5 class="font-bold text-blue-900 group-hover:text-blue-600">Imunidade para Igrejas</h5>
+                    <p class="text-xs text-slate-500 mt-2">Guia para garantir isenção tributária.</p>
+                </div>
+                <div class="group cursor-pointer">
+                    <div class="h-48 bg-slate-200 rounded-3xl mb-6 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&q=80&w=500" class="w-full h-full object-cover">
+                    </div>
+                    <h5 class="font-bold text-blue-900 group-hover:text-blue-600">Documentos para o IR 2026</h5>
+                    <p class="text-xs text-slate-500 mt-2">Veja a lista completa para não atrasar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="orcamento" class="py-24 px-6 bg-slate-50">
+        <div class="max-w-4xl mx-auto bg-white rounded-[2.5rem] p-8 md:p-16 shadow-xl border border-slate-100">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold font-lexend text-blue-900 uppercase">Solicite um Orçamento</h2>
+            </div>
+            <form id="form-contato" class="grid md:grid-cols-2 gap-6">
+                <input type="text" id="nome" placeholder="Nome completo" class="input-field" required>
+                <input type="email" id="email" placeholder="E-mail profissional" class="input-field" required>
+                <input type="text" id="tel" placeholder="(21) 99999-9999" class="input-field" required>
+                <select id="tipo_servico" class="input-field cursor-pointer" required>
+                    <option value="">Serviço de Interesse</option>
+                    <option value="Empresa">Abertura de Empresa</option>
+                    <option value="Igreja">Regularização de Igreja</option>
+                    <option value="IRPF">Imposto de Renda</option>
+                </select>
+                <textarea id="mensagem" rows="4" placeholder="Como podemos ajudar?" class="input-field md:col-span-2 resize-none"></textarea>
+                <button type="submit" id="btn-enviar" class="md:col-span-2 bg-blue-900 text-white py-5 rounded-2xl font-bold hover:bg-blue-800 transition-all shadow-lg active:scale-95">ENVIAR SOLICITAÇÃO</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="contato" class="py-24 px-6 bg-white">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-8">
+                <div>
+                    <h2 class="text-3xl font-bold font-lexend text-blue-900 uppercase mb-4">Onde Estamos</h2>
+                    <p class="text-slate-500">Localização estratégica no coração de Queimados.</p>
+                </div>
+                <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100">
+                    <p class="text-sm font-bold text-blue-900 mb-1">📍 Endereço Profissional</p>
+                    <p class="text-sm text-slate-600 mb-4">Rua Ver. Marinho Hemetério Oliveira, 853 - Vila Nascente, Queimados - RJ</p>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=Rua+Ver.+Marinho+Hemetério+Oliveira+853+Queimados+RJ" 
+                       target="_blank" class="flex items-center gap-2 bg-white border border-slate-200 px-4 py-2 rounded-lg text-xs font-bold text-blue-600 hover:bg-blue-50 transition-all w-fit">
+                        COMO CHEGAR (GPS)
+                    </a>
+                </div>
+                <button onclick="enviarWhatsapp('geral')" class="btn-whatsapp-pulse w-full md:w-auto">WHATSAPP DA JBC</button>
+            </div>
+            
+            <div class="rounded-3xl overflow-hidden shadow-2xl h-[400px] border-4 border-slate-50">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3681.396113617304!2d-43.5593744!3d-22.713532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9946059d0407a5%3A0xc07a51c4a00445d!2sR.%20Ver.%20Marinho%20Hemet%C3%A9rio%20Oliveira%2C%20853%20-%20Vila%20Nascente%2C%20Queimados%20-%20RJ%2C%2026323-270!5e0!3m2!1spt-BR!2sbr!4v1714900000000!5m2!1spt-BR!2sbr" 
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-blue-950 text-white py-16 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12 border-b border-white/10 pb-12 mb-8 text-[11px] uppercase tracking-widest">
+            <div>
+                <span class="text-2xl font-bold font-lexend normal-case tracking-normal">JBC</span>
+                <p class="text-blue-300 mt-4 leading-relaxed lowercase tracking-normal">Consultoria contábil especializada em Queimados.</p>
+            </div>
+            <div class="space-y-3">
+                <p class="font-bold text-white/40">Navegação</p>
+                <a href="#inicio" class="block hover:text-blue-400">Início</a>
+                <a href="#servicos" class="block hover:text-blue-400">Serviços</a>
+                <a href="#orcamento" class="block hover:text-blue-400">Orçamento</a>
+            </div>
+            <div class="space-y-3">
+                <p class="font-bold text-white/40">Dados</p>
+                <p class="text-blue-100">WhatsApp: (21) 97384-0000</p>
+                <p class="text-blue-100">Vila Nascente, Queimados - RJ</p>
+            </div>
+        </div>
+        <div class="text-center text-[9px] text-white/20 tracking-[0.5em] uppercase">
+            © 2026 Juan G. Costa - ADS Student Project
+        </div>
+    </footer>
+
+    <script>
+        function enviarWhatsapp(servico) {
+            const fone = "5521973840000";
+            let msg = "";
+            switch(servico) {
+                case 'empresa': msg = "Olá! Gostaria de saber mais sobre a *abertura de empresas*."; break;
+                case 'igreja': msg = "Olá! Preciso de ajuda com a *regularização de uma Igreja*."; break;
+                case 'irpf': msg = "Olá! Tenho dúvidas sobre o *Imposto de Renda*."; break;
+                default: msg = "Olá! Gostaria de agendar uma consultoria contábil.";
+            }
+            window.open(`https://wa.me/${fone}?text=${encodeURIComponent(msg)}`, '_blank');
+        }
+
+        const form = document.getElementById('form-contato');
+        const modal = document.getElementById('modal-sucesso');
+        const btnEnviar = document.getElementById('btn-enviar');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            btnEnviar.innerText = "ENVIANDO...";
+            btnEnviar.disabled = true;
+            setTimeout(() => {
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                btnEnviar.innerText = "ENVIAR SOLICITAÇÃO";
+                btnEnviar.disabled = false;
+                form.reset();
+            }, 1200);
+        });
+
+        function fecharModal() {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('reveal-visible');
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('reveal-hidden');
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
